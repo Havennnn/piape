@@ -13,19 +13,79 @@
       </a>
       
       <nav class="hidden md:flex items-center gap-6">
-        <NavItem href="#home" class="group">
+        <NavItem href="#home" class="group flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:scale-110"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
           Home
           <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
         </NavItem>
-        <NavItem href="#education" class="group">
+        <NavItem href="#education" class="group flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:scale-110"
+          >
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
           Education
           <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
         </NavItem>
-        <NavItem href="#experience" class="group">
+        <NavItem href="#experience" class="group flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:scale-110"
+          >
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
           Experience
           <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
         </NavItem>
-        <NavItem href="#projects" class="group">
+        <NavItem href="#projects" class="group flex items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:scale-110"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
           Projects
           <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
         </NavItem>
@@ -78,10 +138,74 @@
       :class="mobileMenuOpen ? 'animate-slide-down' : 'animate-slide-up'"
     >
       <div class="container py-4 px-4 md:px-6 space-y-3">
-        <NavItem href="#home" @click="mobileMenuOpen = false" class="block py-2 text-lg">Home</NavItem>
-        <NavItem href="#education" @click="mobileMenuOpen = false" class="block py-2 text-lg">Education</NavItem>
-        <NavItem href="#experience" @click="mobileMenuOpen = false" class="block py-2 text-lg">Experience</NavItem>
-        <NavItem href="#projects" @click="mobileMenuOpen = false" class="block py-2 text-lg">Projects</NavItem>
+        <NavItem href="#home" @click="mobileMenuOpen = false" class="block py-2 text-lg flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Home
+        </NavItem>
+        <NavItem href="#education" @click="mobileMenuOpen = false" class="block py-2 text-lg flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          Education
+        </NavItem>
+        <NavItem href="#experience" @click="mobileMenuOpen = false" class="block py-2 text-lg flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+          Experience
+        </NavItem>
+        <NavItem href="#projects" @click="mobileMenuOpen = false" class="block py-2 text-lg flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          Projects
+        </NavItem>
       </div>
     </div>
   </header>
