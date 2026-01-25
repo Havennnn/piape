@@ -2,22 +2,24 @@
   <section id="experience" class="py-20 bg-muted/30">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
-        <BaseBadge variant="outline" class="mb-4 px-3 py-1 text-sm">
+        <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
           Experience
         </BaseBadge>
         <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
-          Professional Journey
+          Professional Experience
         </BaseHeading>
+        <BaseText class="mt-4 max-w-2xl mx-auto text-muted-foreground">
+          My journey in the tech industry and the projects I've worked on
+        </BaseText>
       </div>
       
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-3xl mx-auto space-y-6">
         <ExperienceItem
-          v-for="(experience, index) in experienceData"
+          v-for="(experience, index) in experiences"
           :key="index"
-          :title="experience.title"
-          :company="experience.company"
-          :duration="experience.duration"
-          :responsibilities="experience.responsibilities"
+          :style="{ animationDelay: `${index * 0.1}s` }"
+          class="animate-in fade-in slide-in-from-bottom-4 duration-500"
+          :experience="experience"
         />
       </div>
     </div>
@@ -27,37 +29,46 @@
 <script setup lang="ts">
 import BaseBadge from '@/components/atoms/BaseBadge.vue'
 import BaseHeading from '@/components/atoms/BaseHeading.vue'
+import BaseText from '@/components/atoms/BaseText.vue'
 import ExperienceItem from '@/components/molecules/ExperienceItem.vue'
 
 interface Experience {
-  title: string
   company: string
-  duration: string
-  responsibilities: string[]
+  role: string
+  location: string
+  startDate: string
+  endDate: string
+  description: string
+  skills: string[]
 }
 
-const experienceData = [
+const experiences = [
   {
-    title: "Frontend Developer",
-    company: "Tech Solutions Inc.",
-    duration: "2022 - Present",
-    responsibilities: [
-      "Develop and maintain responsive web applications using Vue 3 and TypeScript",
-      "Collaborate with designers to implement pixel-perfect UI/UX",
-      "Optimize applications for maximum speed and scalability",
-      "Mentor junior developers and conduct code reviews"
-    ]
+    company: 'Tech Corporation',
+    role: 'Senior Frontend Developer',
+    location: 'San Francisco, CA',
+    startDate: '2020',
+    endDate: 'Present',
+    description: 'Lead frontend development for the company\'s flagship product, improving user experience and increasing conversion rates by 25%.',
+    skills: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Webpack']
   },
   {
-    title: "Web Developer Intern",
-    company: "Digital Agency",
-    duration: "2021 - 2022",
-    responsibilities: [
-      "Built responsive websites using HTML, CSS, and JavaScript",
-      "Implemented interactive features and animations",
-      "Fixed bugs and performed website maintenance",
-      "Assisted in client communication and project management"
-    ]
+    company: 'Digital Agency',
+    role: 'Frontend Developer',
+    location: 'New York, NY',
+    startDate: '2018',
+    endDate: '2020',
+    description: 'Developed responsive websites and web applications for various clients using modern frontend technologies.',
+    skills: ['React', 'JavaScript', 'CSS3', 'Sass']
+  },
+  {
+    company: 'Startup Inc',
+    role: 'Junior Developer',
+    location: 'Boston, MA',
+    startDate: '2017',
+    endDate: '2018',
+    description: 'Assisted in developing and maintaining the company\'s web presence using HTML, CSS, and JavaScript.',
+    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery']
   }
 ] as Experience[]
 </script>
