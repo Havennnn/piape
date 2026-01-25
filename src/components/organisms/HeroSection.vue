@@ -9,11 +9,11 @@
         </div>
         
         <BaseHeading :level="1" class="mb-4 text-4xl md:text-5xl lg:text-6xl animate-slide-up">
-          Hi, I'm <span class="text-primary">Your Name</span>
+          Hi, I'm <span class="text-primary">Pia Pelaez</span>
         </BaseHeading>
         
         <BaseHeading :level="2" class="mb-6 text-muted-foreground font-medium text-xl md:text-2xl animate-slide-up animation-delay-200">
-          Frontend Developer & UI Designer
+          Frontend Developer & Backend Developer
         </BaseHeading>
         
         <BaseText class="mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed animate-slide-up animation-delay-400">

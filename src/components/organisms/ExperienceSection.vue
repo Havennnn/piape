@@ -62,13 +62,15 @@ const experiences = [
     skills: ['React', 'JavaScript', 'CSS3', 'Sass']
   },
   {
-    company: 'Startup Inc',
-    role: 'Junior Developer',
-    location: 'Boston, MA',
-    startDate: '2017',
-    endDate: '2018',
-    description: 'Assisted in developing and maintaining the company\'s web presence using HTML, CSS, and JavaScript.',
-    skills: ['HTML', 'CSS', 'JavaScript', 'jQuery']
+    title: "Web Developer Intern",
+    company: "Digital Agency",
+    duration: "2021 - 2022",
+    responsibilities: [
+      "Built responsive websites using HTML, CSS, and JavaScript",
+      "Implemented interactive features and animations",
+      "Fixed bugs and performed website maintenance",
+      "Assisted in client communication and project management"
+    ]
   }
 ] as Experience[]
 </script>

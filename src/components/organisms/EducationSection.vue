@@ -133,12 +133,10 @@ const educationList = [
     description: 'Specialized in software engineering, database management, and computer networking. Graduated with honors.'
   },
   {
-    institution: 'Online Learning Platform',
-    degree: 'Web Development Bootcamp',
-    field: 'Full Stack Development',
-    startDate: '2018',
-    endDate: '2019',
-    description: 'Comprehensive training in modern web technologies including HTML, CSS, JavaScript, and various frameworks.'
+    school: "Online Learning Platform",
+    degree: "Full Stack Web Development Certification",
+    dates: "2022 - 2023",
+    description: "Comprehensive training in modern web technologies including React, Node.js, and database design."
   }
 ] as Education[]
 
