@@ -3,23 +3,38 @@
     <div class="container flex h-16 items-center justify-between mx-auto px-4 md:px-6">
       <a
         href="#home"
-        class="flex items-center gap-2 font-bold text-xl text-primary"
+        class="flex items-center gap-2 font-bold text-xl text-primary group"
         @click="handleClick"
       >
-        <span>Portfolio</span>
+        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform duration-300">
+          <span class="text-sm">P</span>
+        </div>
+        <span class="text-2xl tracking-tight">Portfolio</span>
       </a>
       
       <nav class="hidden md:flex items-center gap-6">
-        <NavItem href="#home">Home</NavItem>
-        <NavItem href="#education">Education</NavItem>
-        <NavItem href="#experience">Experience</NavItem>
-        <NavItem href="#projects">Projects</NavItem>
+        <NavItem href="#home" class="group">
+          Home
+          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </NavItem>
+        <NavItem href="#education" class="group">
+          Education
+          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </NavItem>
+        <NavItem href="#experience" class="group">
+          Experience
+          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </NavItem>
+        <NavItem href="#projects" class="group">
+          Projects
+          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+        </NavItem>
       </nav>
       
       <div class="md:hidden">
         <button
           type="button"
-          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-muted"
           @click="toggleMobileMenu"
         >
           <svg
@@ -60,12 +75,13 @@
     <div
       v-if="mobileMenuOpen"
       class="md:hidden border-t bg-background"
+      :class="mobileMenuOpen ? 'animate-slide-down' : 'animate-slide-up'"
     >
       <div class="container py-4 px-4 md:px-6 space-y-3">
-        <NavItem href="#home" @click="mobileMenuOpen = false">Home</NavItem>
-        <NavItem href="#education" @click="mobileMenuOpen = false">Education</NavItem>
-        <NavItem href="#experience" @click="mobileMenuOpen = false">Experience</NavItem>
-        <NavItem href="#projects" @click="mobileMenuOpen = false">Projects</NavItem>
+        <NavItem href="#home" @click="mobileMenuOpen = false" class="block py-2 text-lg">Home</NavItem>
+        <NavItem href="#education" @click="mobileMenuOpen = false" class="block py-2 text-lg">Education</NavItem>
+        <NavItem href="#experience" @click="mobileMenuOpen = false" class="block py-2 text-lg">Experience</NavItem>
+        <NavItem href="#projects" @click="mobileMenuOpen = false" class="block py-2 text-lg">Projects</NavItem>
       </div>
     </div>
   </header>
@@ -89,3 +105,37 @@ const handleClick = (event: MouseEvent) => {
   }
 }
 </script>
+
+<style scoped>
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    height: auto;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out forwards;
+  overflow: hidden;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+  overflow: hidden;
+}
+</style>

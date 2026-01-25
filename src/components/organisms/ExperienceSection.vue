@@ -1,9 +1,14 @@
 <template>
   <section id="experience" class="py-20 bg-muted/30">
     <div class="container mx-auto px-4 md:px-6">
-      <BaseHeading :level="2" class="mb-12 text-center">
-        Experience
-      </BaseHeading>
+      <div class="text-center mb-16">
+        <BaseBadge variant="outline" class="mb-4 px-3 py-1 text-sm">
+          Experience
+        </BaseBadge>
+        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
+          Professional Journey
+        </BaseHeading>
+      </div>
       
       <div class="max-w-4xl mx-auto">
         <ExperienceItem
@@ -20,6 +25,7 @@
 </template>
 
 <script setup lang="ts">
+import BaseBadge from '@/components/atoms/BaseBadge.vue'
 import BaseHeading from '@/components/atoms/BaseHeading.vue'
 import ExperienceItem from '@/components/molecules/ExperienceItem.vue'
 

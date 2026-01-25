@@ -1,42 +1,53 @@
 <template>
   <section id="education" class="py-20 bg-background">
     <div class="container mx-auto px-4 md:px-6">
-      <BaseHeading :level="2" class="mb-12 text-center">
-        Education
-      </BaseHeading>
+      <div class="text-center mb-16">
+        <BaseBadge variant="outline" class="mb-4 px-3 py-1 text-sm">
+          Education
+        </BaseBadge>
+        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
+          Academic Background
+        </BaseHeading>
+      </div>
       
       <div class="max-w-3xl mx-auto space-y-8">
-        <div
-          v-for="(education, index) in educationData"
+        <Card 
+          v-for="(education, index) in educationData" 
           :key="index"
-          class="flex flex-col md:flex-row gap-8 p-6 bg-muted/50 rounded-lg"
+          class="p-6 bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg group"
         >
-          <div class="flex-shrink-0 w-full md:w-48 text-sm font-medium text-muted-foreground">
-            {{ education.dates }}
-          </div>
-          
-          <div class="flex-1">
-            <BaseHeading :level="3" class="mb-2">
-              {{ education.school }}
-            </BaseHeading>
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-shrink-0 w-full md:w-48">
+              <div class="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
+                {{ education.dates }}
+              </div>
+            </div>
             
-            <BaseText class="mb-4 text-muted-foreground">
-              {{ education.degree }}
-            </BaseText>
-            
-            <BaseText class="text-muted-foreground">
-              {{ education.description }}
-            </BaseText>
+            <div class="flex-1">
+              <BaseHeading :level="3" class="mb-2 text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                {{ education.school }}
+              </BaseHeading>
+              
+              <BaseText class="mb-4 text-muted-foreground font-medium">
+                {{ education.degree }}
+              </BaseText>
+              
+              <BaseText class="text-muted-foreground leading-relaxed">
+                {{ education.description }}
+              </BaseText>
+            </div>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import BaseBadge from '@/components/atoms/BaseBadge.vue'
 import BaseHeading from '@/components/atoms/BaseHeading.vue'
 import BaseText from '@/components/atoms/BaseText.vue'
+import Card from '@/components/ui/Card.vue'
 
 interface Education {
   school: string
