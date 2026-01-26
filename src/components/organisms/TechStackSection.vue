@@ -1,5 +1,5 @@
 <template>
-  <section id="tech-stack" class="py-20 bg-muted/30">
+  <section id="tech-stack" class="py-20" style="background-color: #E6B2BA">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">

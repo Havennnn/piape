@@ -24,6 +24,16 @@
           {{ experience.description }}
         </p>
         
+        <div v-if="experience.responsibilities && experience.responsibilities.length > 0" class="mb-4">
+          <h4 class="text-sm font-semibold text-foreground mb-2">Responsibilities:</h4>
+          <ul class="space-y-1">
+            <li v-for="(responsibility, index) in experience.responsibilities" :key="index" class="text-sm text-muted-foreground flex items-start gap-2">
+              <span class="text-primary mt-1">•</span>
+              <span>{{ responsibility }}</span>
+            </li>
+          </ul>
+        </div>
+        
         <div class="flex flex-wrap gap-2">
           <span
             v-for="skill in experience.skills"
@@ -48,6 +58,7 @@ interface Experience {
   startDate: string
   endDate: string
   description: string
+  responsibilities: string[]
   skills: string[]
 }
 

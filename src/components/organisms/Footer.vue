@@ -1,12 +1,10 @@
 <template>
-  <footer id="contact" class="py-12 bg-muted/30 border-t">
+  <footer id="contact" class="py-12 border-t" style="background-color: #FFF7F3">
     <div class="container mx-auto px-4 md:px-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-2 font-bold text-xl text-primary group">
-          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform duration-300">
-            <span class="text-sm">P</span>
-          </div>
-          <span class="text-2xl tracking-tight">Portfolio</span>
+          
+          <span class="text-2xl tracking-tight">Contact Me</span>
         </div>
         
         <div class="flex gap-6">
@@ -83,13 +81,11 @@
         </div>
         
         <BaseText class="text-sm text-muted-foreground">
-          © {{ new Date().getFullYear() }} Your Name. All rights reserved.
+          
         </BaseText>
       </div>
       
-      <div class="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-        <p>Designed with ❤️ using Vue 3, Tailwind CSS, and shadcn components</p>
-      </div>
+     
     </div>
   </footer>
 </template>

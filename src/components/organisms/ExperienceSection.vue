@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="py-20 bg-muted/30">
+  <section id="experience" class="py-20" style="background-color: #FFF7F3">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
@@ -39,38 +39,36 @@ interface Experience {
   startDate: string
   endDate: string
   description: string
+  responsibilities: string[]
   skills: string[]
 }
 
 const experiences = [
   {
-    company: 'Tech Corporation',
-    role: 'Senior Frontend Developer',
-    location: 'San Francisco, CA',
-    startDate: '2020',
-    endDate: 'Present',
-    description: 'Lead frontend development for the company\'s flagship product, improving user experience and increasing conversion rates by 25%.',
-    skills: ['Vue 3', 'TypeScript', 'Tailwind CSS', 'Webpack']
-  },
-  {
-    company: 'Digital Agency',
-    role: 'Frontend Developer',
-    location: 'New York, NY',
-    startDate: '2018',
-    endDate: '2020',
-    description: 'Developed responsive websites and web applications for various clients using modern frontend technologies.',
-    skills: ['React', 'JavaScript', 'CSS3', 'Sass']
-  },
-  {
-    title: "Web Developer Intern",
-    company: "Digital Agency",
-    duration: "2021 - 2022",
+    company: 'Accenture',
+    role: 'Packaged App Development Associate',
+    location: 'Philippines, Manila',
+    startDate: 'September 2025',
+    endDate: 'February 2026',
     responsibilities: [
-      "Built responsive websites using HTML, CSS, and JavaScript",
-      "Implemented interactive features and animations",
-      "Fixed bugs and performed website maintenance",
-      "Assisted in client communication and project management"
-    ]
+      "Acted as Bench Team Lead, coordinating daily activities, tracking deliverables, and serving as point-of-contact between trainees and leads",
+      "Supported application testing activities, including test case execution, result validation, and defect reporting",
+      "Performed basic SQL queries to validate data and support testing activities",
+      "Gained exposure to enterprise systems (Workday), performed data transformation, validation, and error handling"
+    ],
+  },
+  {
+    company: "Accenture Academe",
+    role: "Fullstack Developer Intern",
+    location: "Philippines, Manila",
+    startDate: "February 2025",
+    endDate: "March 2025",
+    responsibilities: [
+      "Completed intensive training covering fullstack development such as Java, Springboot, Angular, Javascript",
+      "Built understanding of REST APIs, backend workflows, and database interactions",
+      "Used tools such as Git/GitHub, Maven, Eclipse, and VS Code for collaborative development",
+      "Strengthened problem-solving, debugging, and technical documentation skills"
+    ],
   }
 ] as Experience[]
 </script>

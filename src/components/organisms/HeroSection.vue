@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="py-20 md:py-32 bg-gradient-to-b from-background to-muted/50">
+  <section id="home" class="py-20 md:py-32" style="background-color: #C599B6">
     <div class="container mx-auto px-4 md:px-6">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         <div class="mb-6 animate-fade-in">
@@ -17,8 +17,7 @@
         </BaseHeading>
         
         <BaseText class="mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed animate-slide-up animation-delay-400">
-          I create beautiful, responsive, and accessible web applications using
-          modern frontend technologies. Passionate about clean code and intuitive design.
+          I create user-focused, responsive web applications by combining modern frontend tools with reliable backend systems. Passionate about clean code, intuitive design, and continuously improving my development skills.
         </BaseText>
         
         <div class="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-600">

@@ -1,5 +1,5 @@
 <template>
-  <section id="education" class="py-20">
+  <section id="education" class="py-20" style="background-color: #FAD0C4">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-16">
         <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
