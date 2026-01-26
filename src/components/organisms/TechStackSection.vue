@@ -9,7 +9,7 @@
           Tech Stack & Expertise
         </BaseHeading>
         <BaseText class="mt-4 max-w-2xl mx-auto text-muted-foreground">
-          Here are the technologies and tools I work with to build exceptional web applications
+          Here are the technologies and tools I work with to build exceptional web applications.
         </BaseText>
       </div>
       
@@ -114,6 +114,53 @@
                   <path d="M12 12h7v3.5a3.5 3.5 0 0 1-3.5 3.5H12v-7z"></path>
                 </svg>
               </template>
+              <template v-else-if="tech.icon === 'java'">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-6 h-6"
+                >
+                  <path d="M6 10c0 2 1 3 2 4-2 1-4 2-4 5 0 3 2 5 5 5s5-2 5-5c0-3-2-4-4-5 1-1 2-2 2-4 0-2-1-4-3-4-2 0-3 2-3 4z"></path>
+                  <path d="M14 10c0 2 1 3 2 4-2 1-4 2-4 5 0 3 2 5 5 5s5-2 5-5c0-3-2-4-4-5 1-1 2-2 2-4 0-2-1-4-3-4-2 0-3 2-3 4z"></path>
+                </svg>
+              </template>
+              <template v-else-if="tech.icon === 'angular'">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-6 h-6"
+                >
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                  <polyline points="12 12 16 8 12 4 8 8 12 12"></polyline>
+                </svg>
+              </template>
+              <template v-else-if="tech.icon === 'springboot'">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="w-6 h-6"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v10"></path>
+                  <path d="M9 10h6"></path>
+                  <path d="M9 14h6"></path>
+                </svg>
+              </template>
             </div>
           </div>
           <BaseHeading :level="3" class="text-lg font-bold text-foreground mb-2">
@@ -157,24 +204,24 @@ const techStack = [
     icon: 'tailwind'
   },
   {
-    name: 'TypeScript',
-    description: 'Type-safe JavaScript superset',
-    icon: 'typescript'
+    name: 'Java',
+    description: 'Object-oriented programming language',
+    icon: 'java'
   },
   {
-    name: 'Node.js',
-    description: 'JavaScript runtime environment',
-    icon: 'node'
+    name: 'Angular',
+    description: 'TypeScript web framework',
+    icon: 'angular'
+  },
+  {
+    name: 'Springboot',
+    description: 'Java framework for APIs',
+    icon: 'springboot'
   },
   {
     name: 'Git',
     description: 'Version control system',
     icon: 'git'
-  },
-  {
-    name: 'Figma',
-    description: 'Design and prototyping tool',
-    icon: 'figma'
   }
 ] as Tech[]
 </script>

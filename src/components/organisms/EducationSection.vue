@@ -32,7 +32,9 @@
                 stroke-linejoin="round"
                 class="w-6 h-6"
               >
-                <path d="M12 3v12m0 0l-4 4m4-4l4 4M2 17h20"></path>
+                <path d="M12 8L2 12v1h20v-1l-10-4z"></path>
+                <line x1="12" y1="13" x2="12" y2="19"></line>
+                <circle cx="12" cy="21" r="1"></circle>
               </svg>
             </div>
             <div class="flex-1">
@@ -125,36 +127,53 @@ interface Certification {
 
 const educationList = [
   {
-    institution: 'University of Technology',
-    degree: 'Bachelor of Science',
+    institution: 'STI College - Ortigas Cainta',
+    degree: 'Bachelor of Science in Computer Science',
     field: 'Computer Science',
-    startDate: '2013',
-    endDate: '2017',
-    description: 'Specialized in software engineering, database management, and computer networking. Graduated with honors.'
+    startDate: '2021',
+    endDate: '2025',
+    description: 'Specialized in software engineering, database management, and computer networking. Graduated with Cum Laude.'
   },
   {
-    school: "Online Learning Platform",
-    degree: "Full Stack Web Development Certification",
-    dates: "2022 - 2023",
-    description: "Comprehensive training in modern web technologies including React, Node.js, and database design."
+    institution: 'Montessori Professional College of Asia - Antipolo City',
+    degree: 'Information and Communications Technology',
+    field: 'ICT',
+    startDate: '2018',
+    endDate: '2020',
+    description: 'Developed basic applications using Visual Basic, focusing on fundamental programming. Graduated with Honors.'
   }
 ] as Education[]
 
 const certifications = [
   {
-    name: 'Frontend Developer',
-    issuer: 'Tech Certification Board',
-    year: '2019'
+    name: 'Full Stack Web Development',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
   },
   {
-    name: 'Vue.js Expert',
-    issuer: 'Vue.js Foundation',
-    year: '2020'
+    name: 'Java Masterclass',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
   },
   {
-    name: 'Responsive Web Design',
-    issuer: 'Web Standards Institute',
-    year: '2021'
+    name: 'Angular',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
+  },
+  {
+    name: 'Springboot & Hibernate',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
+  },
+  {
+    name: 'Java Unit Testing (JUnit & Mockito)',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
+  },
+   {
+    name: 'Git',
+    issuer: 'Udemy (Accenture Academe)',
+    year: '2025'
   }
 ] as Certification[]
 
