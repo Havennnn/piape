@@ -1,14 +1,17 @@
 <template>
-  <section id="projects" class="py-20" style="background-color: #E6B2BA">
-    <div class="container mx-auto px-4 md:px-6">
+  <section id="projects" class="py-20 bg-background relative overflow-hidden">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/5 to-transparent"></div>
+    
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-16">
-        <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
+        <BaseBadge variant="default" class="mb-4 px-4 py-1.5 text-sm text-white/20 text-primary-foreground border border-primary/30">
           Featured Work
         </BaseBadge>
-        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
+        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground font-light tracking-wide">
           Projects
         </BaseHeading>
-        <BaseText class="mt-4 max-w-2xl mx-auto text-muted-foreground">
+        <BaseText class="mt-4 max-w-2xl mx-auto text-gray-100 font-light">
           A selection of my recent work showcasing my skills and experience
         </BaseText>
       </div>

@@ -1,14 +1,17 @@
 <template>
-  <section id="education" class="py-20" style="background-color: #FAD0C4">
-    <div class="container mx-auto px-4 md:px-6">
+  <section id="education" class="py-20 bg-background relative overflow-hidden">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/5 to-transparent"></div>
+    
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-16">
-        <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
+        <BaseBadge variant="default" class="mb-4 px-4 py-1.5 text-sm text-white/20 text-primary-foreground border border-primary/30">
           Education
         </BaseBadge>
-        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
+        <BaseHeading :level="2" class="text-3xl md:text-4xl text-white font-light tracking-wide">
           Education & Certification
         </BaseHeading>
-        <BaseText class="mt-4 max-w-2xl mx-auto text-muted-foreground">
+        <BaseText class="mt-4 max-w-2xl mx-auto text-gray-100 font-light">
           My academic background and professional certifications
         </BaseText>
       </div>
@@ -17,11 +20,11 @@
         <div
           v-for="(education, index) in educationList"
           :key="index"
-          class="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+          class="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
           :style="{ animationDelay: `${index * 0.1}s` }"
         >
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+            <div class="w-12 h-12 rounded-lg text-white/10 flex items-center justify-center text-primary group-hover:text-white/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -38,19 +41,19 @@
               </svg>
             </div>
             <div class="flex-1">
-              <div class="text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors duration-300">
+              <div class="text-md font-semibold text-white group-hover:text-primary-light transition-colors duration-300">
                 {{ education.institution }}
               </div>
-              <div class="text-sm text-muted-foreground mb-2">
+              <div class="text-sm text-gray-100 mb-2">
                 {{ formatDateRange(education.startDate, education.endDate) }}
               </div>
-              <div class="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-1">
+              <div class="text-md text-foreground transition-colors duration-300 mb-1 font-light">
                 {{ education.degree }}
               </div>
-              <div class="text-sm text-muted-foreground mb-3">
+              <div class="text-sm text-gray-100 mb-3">
                 {{ education.field }}
               </div>
-              <p class="text-muted-foreground text-sm">
+              <p class="text-gray-100 text-sm font-light">
                 {{ education.description }}
               </p>
             </div>
@@ -60,10 +63,10 @@
       
       <div class="mt-12 max-w-3xl mx-auto">
         <div class="text-center mb-8">
-          <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
+          <BaseBadge variant="default" class="mb-4 px-4 py-1.5 text-sm text-white/20 text-primary-foreground border border-primary/30">
             Certifications
           </BaseBadge>
-          <BaseHeading :level="3" class="text-2xl font-bold text-foreground">
+          <BaseHeading :level="3" class="text-2xl font-bold text-foreground font-light">
             Professional Certifications
           </BaseHeading>
         </div>
@@ -72,10 +75,10 @@
           <div
             v-for="(cert, index) in certifications"
             :key="index"
-            class="bg-card p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-md hover:translate-x-1 group text-center"
+            class="bg-card p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-md hover:translate-x-1 group text-center"
             :style="{ animationDelay: `${(educationList.length + index) * 0.1}s` }"
           >
-            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 mx-auto mb-3">
+            <div class="w-10 h-10 rounded-lg text-white/10 flex items-center justify-center text-primary group-hover:text-white/20 group-hover:scale-110 transition-all duration-300 mx-auto mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -92,10 +95,10 @@
             <div class="font-semibold text-foreground group-hover:text-primary transition-colors duration-300 text-sm">
               {{ cert.name }}
             </div>
-            <div class="text-xs text-muted-foreground mt-1">
+            <div class="text-xs text-gray-100 mt-1">
               {{ cert.issuer }}
             </div>
-            <div class="text-xs text-muted-foreground mt-1">
+            <div class="text-xs text-gray-100 mt-1">
               {{ cert.year }}
             </div>
           </div>
@@ -135,7 +138,7 @@ const educationList = [
     description: 'Specialized in software engineering, database management, and computer networking. Graduated with Cum Laude.'
   },
   {
-    institution: 'Montessori Professional College of Asia - Antipolo City',
+    institution: 'Montessori Professional College of Asia',
     degree: 'Information and Communications Technology',
     field: 'ICT',
     startDate: '2018',

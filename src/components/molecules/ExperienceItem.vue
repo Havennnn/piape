@@ -1,56 +1,46 @@
 <template>
-  <Card class="bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-x-1 group">
-    <div class="p-6 flex flex-col md:flex-row gap-6">
-      <div class="md:w-1/3">
-        <div class="text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors duration-300">
+  <div class="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-lg text-white/10 flex items-center justify-center text-primary group-hover:text-white/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6"
+        >
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+        </svg>
+      </div>
+      <div class="flex-1">
+        <div class="text-sm font-semibold text-primary group-hover:text-primary-light transition-colors duration-300">
           {{ experience.company }}
         </div>
-        <div class="text-sm text-muted-foreground">
-          {{ formatDateRange(experience.startDate, experience.endDate) }}
+        <div class="text-sm text-gray-100 mb-2">
+          {{ formatDateRange(experience.startDate, experience.endDate) }} • {{ experience.location }}
         </div>
-      </div>
-      
-      <div class="md:w-2/3 flex flex-col">
-        <div class="mb-2">
-          <div class="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-            {{ experience.role }}
-          </div>
-          <div class="text-sm text-muted-foreground">
-            {{ experience.location }}
-          </div>
+        <div class="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 mb-3 font-light">
+          {{ experience.role }}
         </div>
-        
-        <p class="text-muted-foreground mb-4">
-          {{ experience.description }}
-        </p>
-        
-        <div v-if="experience.responsibilities && experience.responsibilities.length > 0" class="mb-4">
-          <h4 class="text-sm font-semibold text-foreground mb-2">Responsibilities:</h4>
-          <ul class="space-y-1">
-            <li v-for="(responsibility, index) in experience.responsibilities" :key="index" class="text-sm text-muted-foreground flex items-start gap-2">
-              <span class="text-primary mt-1">•</span>
-              <span>{{ responsibility }}</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="flex flex-wrap gap-2">
-          <span
-            v-for="skill in experience.skills"
-            :key="skill"
-            class="text-xs px-2 py-1 rounded-full bg-muted/50 text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300"
+        <ul class="space-y-2">
+          <li
+            v-for="(responsibility, index) in experience.responsibilities"
+            :key="index"
+            class="text-gray-100 text-sm font-light flex items-start gap-2"
           >
-            {{ skill }}
-          </span>
-        </div>
+            <span class="text-primary mt-1">•</span>
+            <span>{{ responsibility }}</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </Card>
+  </div>
 </template>
 
 <script setup lang="ts">
-import Card from '@/components/ui/Card.vue'
-
 interface Experience {
   company: string
   role: string

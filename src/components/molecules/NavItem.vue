@@ -1,7 +1,7 @@
 <template>
   <a
     :href="href"
-    class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+    class="text-sm font-medium text-gray-100 hover:text-gray-300"
     @click="handleClick"
   >
     <slot />

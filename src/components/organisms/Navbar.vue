@@ -3,13 +3,10 @@
     <div class="container flex h-16 items-center justify-between mx-auto px-4 md:px-6">
       <a
         href="#home"
-        class="flex items-center gap-2 font-bold text-xl text-primary group"
+        class="flex items-center gap-2 font-bold text-xl group"
         @click="handleClick"
       >
-        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform duration-300">
-          <span class="text-sm">P</span>
-        </div>
-        <span class="text-2xl tracking-tight">Portfolio</span>
+        <span class="text-2xl tracking-tight font-medium text-white">Pia Pelaez</span>
       </a>
       
       <nav class="hidden md:flex items-center gap-6">
@@ -30,7 +27,7 @@
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
           Home
-          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+          <span class="block h-0.5 w-0 text-white group-hover:w-full transition-all duration-300"></span>
         </NavItem>
         <NavItem href="#tech-stack" class="group flex items-center gap-1">
           <svg
@@ -50,7 +47,7 @@
             <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
           Tech Stack
-          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+          <span class="block h-0.5 w-0 text-white group-hover:w-full transition-all duration-300"></span>
         </NavItem>
         <NavItem href="#education" class="group flex items-center gap-1">
           <svg
@@ -69,7 +66,7 @@
             <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
           </svg>
           Education
-          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+          <span class="block h-0.5 w-0 text-white group-hover:w-full transition-all duration-300"></span>
         </NavItem>
         <NavItem href="#experience" class="group flex items-center gap-1">
           <svg
@@ -87,7 +84,7 @@
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
           </svg>
           Experience
-          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+          <span class="block h-0.5 w-0 text-white group-hover:w-full transition-all duration-300"></span>
         </NavItem>
         <NavItem href="#projects" class="group flex items-center gap-1">
           <svg
@@ -107,7 +104,7 @@
             <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
           Projects
-          <span class="block h-0.5 w-0 bg-primary group-hover:w-full transition-all duration-300"></span>
+          <span class="block h-0.5 w-0 text-white group-hover:w-full transition-all duration-300"></span>
         </NavItem>
       </nav>
       

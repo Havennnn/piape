@@ -1,16 +1,16 @@
 <template>
-  <Card class="flex flex-col bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 group">
+  <Card class="flex flex-col bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 group">
     <div class="p-6 flex flex-col h-full">
       <div class="mb-4">
-        <BaseBadge variant="default" class="mb-2 px-2 py-0.5 text-xs">
+        <BaseBadge variant="default" class="mb-2 px-2 py-0.5 text-xs text-white/20 text-primary-foreground border border-primary/30">
           {{ project.tech }}
         </BaseBadge>
-        <h3 class="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+        <h3 class="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 font-light">
           {{ project.title }}
         </h3>
       </div>
       
-      <p class="text-muted-foreground mb-6 flex-grow">
+      <p class="text-gray-100 mb-6 flex-grow font-light">
         {{ project.description }}
       </p>
       
@@ -18,7 +18,7 @@
         <span
           v-for="tag in project.tags"
           :key="tag"
-          class="text-xs px-2 py-1 rounded-full bg-muted/50 text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300"
+          class="text-xs px-2 py-1 rounded-full text-white/10 text-primary-foreground group-hover:text-white/20 transition-colors duration-300"
         >
           {{ tag }}
         </span>
@@ -29,7 +29,7 @@
           :href="project.githubUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+          class="flex items-center gap-1.5 text-sm font-medium text-gray-100 hover:text-primary transition-colors duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
           :href="project.liveUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+          class="flex items-center gap-1.5 text-sm font-medium text-gray-100 hover:text-primary transition-colors duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

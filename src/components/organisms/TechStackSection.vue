@@ -1,14 +1,17 @@
 <template>
-  <section id="tech-stack" class="py-20" style="background-color: #E6B2BA">
-    <div class="container mx-auto px-4 md:px-6">
+  <section id="tech-stack" class="py-20 bg-muted relative overflow-hidden">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/5 to-transparent"></div>
+    
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
       <div class="text-center mb-16">
-        <BaseBadge variant="default" class="mb-4 px-3 py-1 text-sm">
+        <BaseBadge variant="default" class="mb-4 px-4 py-1.5 text-sm text-white border border-primary/30">
           Skills
         </BaseBadge>
-        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground">
+        <BaseHeading :level="2" class="text-3xl md:text-4xl font-bold text-foreground tracking-wide">
           Tech Stack & Expertise
         </BaseHeading>
-        <BaseText class="mt-4 max-w-2xl mx-auto text-muted-foreground">
+        <BaseText class="mt-4 max-w-2xl mx-auto text-gray-100 font-light">
           Here are the technologies and tools I work with to build exceptional web applications.
         </BaseText>
       </div>
@@ -17,10 +20,10 @@
         <div
           v-for="(tech, index) in techStack"
           :key="index"
-          class="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 group text-center"
+          class="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-2 group text-center"
         >
           <div class="mb-4 flex justify-center">
-            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+            <div class="w-12 h-12 rounded-lg text-white/10 flex items-center justify-center text-primary group-hover:text-white/20 group-hover:scale-110 transition-all duration-300">
               <template v-if="tech.icon === 'vue'">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,17 +166,17 @@
               </template>
             </div>
           </div>
-          <BaseHeading :level="3" class="text-lg font-bold text-foreground mb-2">
+          <BaseHeading :level="3" class="text-lg font-bold text-foreground mb-2 font-light">
             {{ tech.name }}
           </BaseHeading>
-          <BaseText class="text-sm text-muted-foreground">
+          <BaseText class="text-sm text-gray-100 font-light">
             {{ tech.description }}
           </BaseText>
         </div>
       </div>
       
       <div class="mt-16 text-center">
-        <BaseBadge variant="glass" class="px-4 py-2 text-sm">
+        <BaseBadge variant="secondary" class="px-4 py-2 text-sm text-gray-900 border border-primary/20">
           Continuously learning and exploring new technologies
         </BaseBadge>
       </div>

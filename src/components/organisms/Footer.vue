@@ -1,10 +1,16 @@
 <template>
-  <footer id="contact" class="py-12 border-t" style="background-color: #FFF7F3">
-    <div class="container mx-auto px-4 md:px-6">
+  <footer id="contact" class="py-12 border-t bg-black text-primary-foreground relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-10 w-64 h-64 bg-purple-300 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-80 h-80 bg-purple-400 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="flex items-center gap-2 font-bold text-xl text-primary group">
+        <div class="flex items-center gap-2 font-bold text-xl text-white group">
           
-          <span class="text-2xl tracking-tight">Contact Me</span>
+          <span class="text-2xl tracking-tight font-light">Contact Me</span>
         </div>
         
         <div class="flex gap-6">
@@ -12,7 +18,7 @@
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/10 group"
+            class="text-purple-100 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 group"
             aria-label="GitHub"
           >
             <svg
@@ -36,7 +42,7 @@
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/10 group"
+            class="text-purple-100 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 group"
             aria-label="LinkedIn"
           >
             <svg
@@ -59,7 +65,7 @@
           
           <a
             href="mailto:you@example.com"
-            class="text-muted-foreground hover:text-primary transition-colors p-2 rounded-full hover:bg-primary/10 group"
+            class="text-purple-100 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 group"
             aria-label="Email"
           >
             <svg
@@ -80,7 +86,7 @@
           </a>
         </div>
         
-        <BaseText class="text-sm text-muted-foreground">
+        <BaseText class="text-sm text-purple-100/80 font-light">
           
         </BaseText>
       </div>

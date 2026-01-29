@@ -1,22 +1,28 @@
 <template>
-  <section id="home" class="py-20 md:py-32" style="background-color: #C599B6">
-    <div class="container mx-auto px-4 md:px-6">
+  <section id="home" class="py-10 md:py-20 text-primary-foreground relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 md:px-6 relative z-10">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
         <div class="mb-6 animate-fade-in">
-          <BaseBadge variant="secondary" class="px-3 py-1 text-sm">
+          <BaseBadge variant="secondary" class="px-4 py-1.5 text-sm bg-white/20 backdrop-blur-sm border border-white/30 text-white">
             Available for hire
           </BaseBadge>
         </div>
         
-        <BaseHeading :level="1" class="mb-4 text-4xl md:text-5xl lg:text-6xl animate-slide-up">
-          Hi, I'm <span class="text-primary">Pia Pelaez</span>
+        <BaseHeading :level="1" class="mb-4 text-4xl md:text-5xl lg:text-6xl animate-slide-up font-light tracking-wide">
+          Hi, I'm <span class="text-lavender font-semibold">Pia Pelaez</span>
         </BaseHeading>
         
-        <BaseHeading :level="2" class="mb-6 text-muted-foreground font-medium text-xl md:text-2xl animate-slide-up animation-delay-200">
+        <BaseHeading :level="2" class="mb-6 text-purple-100 font-medium text-xl md:text-2xl animate-slide-up animation-delay-200 font-light">
           Frontend Developer & Backend Developer
         </BaseHeading>
         
-        <BaseText class="mb-8 max-w-2xl text-lg text-muted-foreground leading-relaxed animate-slide-up animation-delay-400">
+        <BaseText class="mb-8 max-w-2xl text-lg text-purple-100/90 leading-relaxed animate-slide-up animation-delay-400 font-light">
           I create user-focused, responsive web applications by combining modern frontend tools with reliable backend systems. Passionate about clean code, intuitive design, and continuously improving my development skills.
         </BaseText>
         
@@ -24,7 +30,7 @@
           <BaseButton
             size="lg"
             @click="handleContactClick"
-            class="px-8 py-3 text-base font-semibold"
+            class="px-8 py-3 text-base font-semibold bg-white text-black hover:bg-purple-50 border-0 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +53,7 @@
             size="lg"
             variant="outline"
             @click="handleProjectsClick"
-            class="px-8 py-3 text-base font-semibold"
+            class="px-8 py-3 text-base font-semibold bg-transparent text-white border-2 border-white/50 hover:bg-white/10 hover:border-white transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +75,7 @@
           </BaseButton>
         </div>
         
-        <div class="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground animate-fade-in animation-delay-800">
+        <div class="mt-16 flex flex-wrap justify-center gap-8 text-sm text-purple-100/80 animate-fade-in animation-delay-800">
           <div class="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
